@@ -1,18 +1,22 @@
 function submit() {
+    //alert("test");
     var donorgroup = document.getElementById("donor-group").value;
+    //alert(donorgroup);
     var donorrh = document.getElementById("donor-rh-factor").value;
-    var patinetgroup = document.getElementById("patinet-group").value;
-    var patinetrh = document.getElementById("patinet-rh-factor").value;
+    //alert(donorrh);
+    var patientgroup = document.getElementById("patient-group").value;
+    var patientrh = document.getElementById("patient-rh-factor").value;
     var log = 
     "log: "
-    + " \ndonor group " + document.getElementById("donor-group").value
-    + " \ndonor rh factor " + document.getElementById("donor-rh-factor").value
-    + " \npatient group " + document.getElementById("patient-group").value
-    + " \npatinet rh factor " + document.getElementById("patient-rh-factor").value
+    + " \ndonor group " + donorgroup
+    + " \ndonor rh factor " + donorrh
+    + " \npatient group " + patientgroup
+    + " \npatinet rh factor " + patientrh
     + ".";
-    var group = group(donorgroup, patinetgroup)
-    response = "results: " + group
-    alert(response);
+    alert(log);
+    // var group = group(donorgroup, patinetgroup)
+    // response = "results: " + group
+    // alert(response);
 }
 
 function group(donor, patient) {

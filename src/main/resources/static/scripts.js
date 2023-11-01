@@ -1,10 +1,10 @@
 function test() {
     var response = 
     "test: "
-    + "donor group " + document.getElementById("donor-group").value
-    + "donor rh factor " + document.getElementById("donor-rh-factor").value
-    + "patient group " + document.getElementById("patient-group").value
-    + "patinet rh factor " + document.getElementById("patient-rh-factor").value
+    + " donor group " + document.getElementById("donor-group").value
+    + " donor rh factor " + document.getElementById("donor-rh-factor").value
+    + " patient group " + document.getElementById("patient-group").value
+    + " patinet rh factor " + document.getElementById("patient-rh-factor").value
     + ".";
     alert(response);
 }

@@ -1,23 +1,39 @@
-function test() {
-    var response = 
-    "test: "
-    + " donor group " + document.getElementById("donor-group").value
-    + " donor rh factor " + document.getElementById("donor-rh-factor").value
-    + " patient group " + document.getElementById("patient-group").value
-    + " patinet rh factor " + document.getElementById("patient-rh-factor").value
+function submit() {
+    var donorgroup = document.getElementById("donor-group").value;
+    var donorrh = document.getElementById("donor-rh-factor").value;
+    var patinetgroup = document.getElementById("patinet-group").value;
+    var patinetrh = document.getElementById("patinet-rh-factor").value;
+    var log = 
+    "log: "
+    + " \ndonor group " + document.getElementById("donor-group").value
+    + " \ndonor rh factor " + document.getElementById("donor-rh-factor").value
+    + " \npatient group " + document.getElementById("patient-group").value
+    + " \npatinet rh factor " + document.getElementById("patient-rh-factor").value
     + ".";
+    var group = group(donorgroup, patinetgroup)
+    response = "results: " + group
     alert(response);
 }
 
-function submit() {
-    var response =
-        "Requested " + document.getElementById("party-size").value
-        + " ticket(s) on " + document.getElementById("travel-date").value
-        + " from " + document.getElementById("departure").value
-        + " to " + document.getElementById("arrival").value
-        + "."
-    alert(response);
+function group(donor, patient) {
+    var group = false
+    if (donor == "o")
+        group = true;
+    else if (patient == "ab")
+        group = true;
+
+    return group
 }
+
+// function submit() {
+//     var response =
+//         "Requested " + document.getElementById("party-size").value
+//         + " ticket(s) on " + document.getElementById("travel-date").value
+//         + " from " + document.getElementById("departure").value
+//         + " to " + document.getElementById("arrival").value
+//         + "."
+//     alert(response);
+// }
 
 //moved the functions below to customlogin.html
 // async function registerUser() {

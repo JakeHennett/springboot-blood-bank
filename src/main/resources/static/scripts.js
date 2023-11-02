@@ -1,4 +1,4 @@
-function submit() {
+async function submit() {
     //alert("test");
     var donorgroup = document.getElementById("donor-group").value;
     //alert(donorgroup);
@@ -13,13 +13,17 @@ function submit() {
     + " \npatient group " + patientgroup
     + " \npatinet rh factor " + patientrh
     + ".";
-    alert(log);
-    // var group = group(donorgroup, patinetgroup)
+    //alert(log);
+    var group = await groupCheck(donorgroup, patientgroup)
+    alert(group);
     // response = "results: " + group
     // alert(response);
 }
 
-function group(donor, patient) {
+async function groupCheck(donor, patient) {
+    console.log("donor: " + donor + "\npatient: " + patient);
+    //alert("group function");
+    //alert(donor + " " + patient);
     var group = false
     if (donor == "o")
         group = true;
